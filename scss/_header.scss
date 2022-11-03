@@ -1,0 +1,28 @@
+header {
+  background-color: #FA1E01;
+  display: flex;
+  align-items: center;
+  height: 10.4rem;
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    .logo {
+      width: 100%;
+      max-width: 15.3rem;
+    }
+
+    .right {
+      display: flex;
+      gap: 4rem;
+      .button {
+        background: #FA1E01;
+
+        a {
+          color: white;
+        }
+      }
+    }
+  }
+}

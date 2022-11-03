@@ -1,0 +1,41 @@
+footer {
+  background: #2F2F2F;
+  height: 34rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  .footer {
+    width: 100%;
+    max-width: 100rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-bottom: 1px solid rgba(217, 217, 217, 0.3);
+
+    .buttons {
+      display: flex;
+      gap: 2.4rem;
+      margin: 4.4rem 0;
+
+      .button {
+        background: #2F2F2F;
+        a {
+          color: white;
+        }
+      }
+    }
+  }
+
+  .reservados {
+    margin-top: 3.9rem;
+    font-size: 1.4rem;
+    font-family: 'Titillium Web', sans-serif;
+    color: white;
+  }
+
+  &.classifiedPage {
+    margin-top: 83.8rem;
+  }
+}

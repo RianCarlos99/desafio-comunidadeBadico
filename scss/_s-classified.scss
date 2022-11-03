@@ -1,0 +1,198 @@
+body {
+  background: #DDDDDD;
+}
+
+.s-classificados {
+  overflow: hidden;
+  .top {
+    width: 100%;
+    height: 35.7rem;
+    background: url(../img/BGClassified.png) no-repeat center center;
+    background-size: cover;
+    position: relative;
+    
+    
+    .title {
+      color: white;
+
+      h1 {
+        width: fit-content;
+        margin: 0 auto;
+        padding-top: 7rem;
+      }
+    }
+
+    .points {
+      position: absolute;
+      bottom: 0;
+      img {
+        width: 100vw;
+      }
+    }
+  }
+
+  .container-classified {
+    position: absolute;
+    left: calc(50% - 552.5px);
+    top: 24.8rem;
+    
+    .podium {
+      display: flex;
+      align-items: flex-end;
+      gap: 2rem;
+      flex-wrap: wrap;
+      margin-bottom: 1.6rem;
+    }
+
+    .accordion {
+      overflow: hidden;
+      background: white;
+      transition: .4s;
+      
+
+      .item {
+        display: flex;
+        justify-content: space-between;
+        padding: 1.05rem 1rem;
+        border-bottom: 1px solid rgba(177, 177, 177, 0.6);
+        cursor: pointer;
+
+        .info {
+          display: flex;
+          align-items: center;
+
+          .number, .name {
+            font-size: 2.4rem;
+            font-family: 'Titillium Web', sans-serif;
+          }
+  
+          .number {
+            margin-right: 2.5rem;
+            position: relative;
+    
+            &::before {
+              content: "";
+              position: absolute;
+              width: 100%;
+              max-width: 0.5rem;
+              height: 1.9rem;
+              background: #4570C0;
+              top: calc(50% - 9.5px);
+              right: -15px;
+            }
+    
+            &.ferrari::before {
+              background: #FA1E01;
+            }
+          }
+          
+          .mark {
+            font-size: 1.4rem;
+            font-family: 'Titillium Web', sans-serif;
+            color: #B1B1B1;
+            margin-left: 1rem;
+          }
+        }
+  
+        .pontuation {
+          display: flex;
+          gap: 0.4rem;
+          align-items: center;
+          width: 100%;
+          max-width: 9.4rem;
+  
+          .pts {
+            width: 100%;
+            max-width: 7rem;
+            font-size: 1.4rem;
+            font-weight: bold;
+            font-family: 'Titillium Web', sans-serif;
+            padding: 0.6rem 1rem;
+            background: #EDEDEC;
+            border-radius: 5rem;
+          }
+  
+          .arrow {
+            width: 100%;
+            max-width: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform .3s linear;
+
+            &.active {
+              transform: rotate(90deg);
+            }
+          }
+        }
+      }
+
+      .accordion-tab {
+        display: none;
+        overflow: hidden;
+        animation: slideUp 1s forwards;
+        // max-height: 0px;
+        transition: max-height 1s ease;
+
+        .picture {
+          padding-bottom: 1rem;
+        }
+
+        ul {
+          width: 100%;
+          
+          li {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 3.2rem;
+            &:not(:last-child) {
+              margin-bottom: 1rem;
+            }
+
+            .left {
+              font-family: 'Titillium Web', sans-serif;
+              font-size: 2.4rem;
+
+            }
+
+            .right {
+              font-family: 'Titillium Web', sans-serif;
+              font-size: 2rem;
+              font-weight: 300;
+              color: #6F6F6F;
+            }
+          }
+        }
+
+        &.active {
+          display: flex;
+          animation: slideDown .5s ease;
+          // max-height: 36.7rem;
+        }
+      }
+
+    }
+  }
+}
+
+@keyframes slideDown {
+  from {
+    max-height: 0px;
+  }
+  
+  to {
+    max-height: 36.7rem;
+
+  }
+}
+
+@keyframes slideUp {
+  from {
+    max-height: 36.7rem;
+  }
+  
+  to {
+    max-height: 0px;
+  }
+}
